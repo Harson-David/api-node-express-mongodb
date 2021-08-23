@@ -22,7 +22,7 @@ exports.findOne = async (req, res) => {
 };
 
 exports.update = async (req, res) => {
-  const user = await User.findByIdAndUpdate(
+  await User.findByIdAndUpdate(
     { _id: req.params._id },
     { $set: req.body }
   );
