@@ -1,13 +1,17 @@
 const express = require("express");
 const cors = require("cors");
 
+//init
 const app = express();
 
-app.set("port", process.env.DB_PORT);
+//settings
+app.set("port", process.env.PORT || 3000);
 
+//middlewares
 app.use(express.json());
 app.use(cors());
 
-app.use(require("./api/users/users.route"));
+//routes
+app.use(require("./users/users.routes"));
 
 module.exports = app;
