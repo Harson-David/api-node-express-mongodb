@@ -1,4 +1,4 @@
-# ENV
+# .ENV
 
 HOST=localhost
 PORT=3200
